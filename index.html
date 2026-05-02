@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GreenLeaf Plants</title>
+  <link rel="stylesheet" href="./styles/style.css"/>
+</head>
+<body>
+
+<header>
+  <h1>🌿 GreenLeaf</h1>
+  <p>Fresh plants for your home</p>
+</header>
+
+<section class="catalog" id="catalog"></section>
+
+<!-- Modal -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="plantName"></h2>
+    <img id="plantImage" />
+    <p id="plantDesc"></p>
+    <iframe id="plantVideo" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+<script src="./scripts/script.js"></script>
+</body>
+</html>
