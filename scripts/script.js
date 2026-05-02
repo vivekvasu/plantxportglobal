@@ -58,6 +58,16 @@ const DATA = [
     name: "Divine Plants",
     desc: "Office & home greenery",
     img: "https://images.unsplash.com/photo-1634185905643-af5d08cf5ef3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aW5kb29yJTIwcGxhdG5zfGVufDB8fDB8fHww?auto=format&fit=crop&w=1200&q=80"
+  },
+  {
+    name: "Landscaping Plants",
+    desc: "Bulk supply for projects",
+    img: "https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&w=1200&q=80"
+  },
+   {
+    name: "Ornamental Plants",
+    desc: "Decorative flowering plants",
+    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80"
   }
 ];
 
