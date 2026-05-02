@@ -1,29 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GreenLeaf Plants</title>
-  <link rel="stylesheet" href="./styles/style.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>PlantXport Global</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="./styles/style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>🌿 GreenLeaf</h1>
-  <p>Fresh plants for your home</p>
+<!-- NAV -->
+<header class="nav">
+
+  <div class="brand">
+    <img class="logo-img"
+      src="https://images.unsplash.com/photo-1525498128493-380d1990a112?auto=format&fit=crop&w=200&q=80"
+      alt="logo">
+
+    <div class="logo-text">PlantXport Global</div>
+  </div>
+
+  <nav class="menu" id="menu">
+    <a href="#home">Home</a>
+    <a href="#catalog">Catalog</a>
+    <a href="#info">About & Contact</a>
+  </nav>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+
 </header>
 
-<section class="catalog" id="catalog"></section>
-
-<!-- Modal -->
-<div class="modal" id="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <h2 id="plantName"></h2>
-    <img id="plantImage" />
-    <p id="plantDesc"></p>
-    <iframe id="plantVideo" frameborder="0" allowfullscreen></iframe>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Global Plant Export Solutions</h1>
+    <p>Premium indoor & outdoor plants for worldwide supply</p>
   </div>
+</section>
+
+<!-- CATALOG -->
+<section id="catalog" class="section">
+  <h2 class="section-title">Our Categories</h2>
+  <div class="grid"></div>
+</section>
+
+<!-- ABOUT + CONTACT -->
+<section id="info" class="info-grid">
+
+  <div class="info-card about">
+    <div class="icon">🌿</div>
+    <h2>About Us</h2>
+
+    <p>
+      PlantXport Global is a premium exporter of indoor and outdoor plants,
+      delivering high-quality greenery solutions worldwide.
+    </p>
+
+    <ul>
+      <li>✔ Certified Export Supply</li>
+      <li>✔ Bulk Wholesale Orders</li>
+      <li>✔ Global Shipping Support</li>
+    </ul>
+  </div>
+
+  <div class="info-card contact">
+    <div class="icon">📞</div>
+    <h2>Contact Us</h2>
+
+    <p><strong>Address:</strong> Karnataka, India</p>
+    <p><strong>Email:</strong> greenleaf@example.com</p>
+    <p><strong>Phone:</strong> +91 9876543210</p>
+
+    <div class="contact-buttons">
+      <a href="https://wa.me/919876543210" class="btn wa">WhatsApp</a>
+      <a href="mailto:greenleaf@example.com" class="btn mail">Email</a>
+    </div>
+  </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+  <div class="footer-content">
+
+    <div class="footer-brand">
+      <h3>PlantXport Global</h3>
+      <p>Premium plant exporter delivering worldwide greenery solutions.</p>
+    </div>
+
+    <div class="social-footer">
+      <h3>Follow Us</h3>
+
+      <div class="social-icons">
+
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+        </a>
+
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
+        </a>
+
+        <a href="#">
+          <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+        </a>
+
+        <a href="mailto:greenleaf@example.com">
+          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
+        </a>
+
+        <a href="https://wa.me/919876543210">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 PlantXport Global. All Rights Reserved.
+  </div>
+
+</footer>
+
+<!-- FLOATING -->
+<div class="floating">
+  <a href="https://wa.me/919876543210" class="wa">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <a href="mailto:greenleaf@example.com" class="mail">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
 </div>
 
 <script src="./scripts/script.js"></script>
