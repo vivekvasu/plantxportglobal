@@ -6,14 +6,17 @@
 
 <title>PlantXport Global</title>
 
+<!-- Fonts + Icons -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- CSS -->
 <link rel="stylesheet" href="./styles/style.css">
 </head>
 
 <body>
 
-<!-- NAV -->
+<!-- ================= NAV ================= -->
 <header class="nav">
 
   <div class="brand">
@@ -36,7 +39,7 @@
 
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero" id="home">
   <div class="hero-content">
     <h1>Global Plant Export Solutions</h1>
@@ -44,13 +47,17 @@
   </div>
 </section>
 
-<!-- CATALOG -->
+<!-- ================= CATALOG ================= -->
 <section id="catalog" class="section">
+
   <h2 class="section-title">Our Categories</h2>
+
+  <!-- GRID (JS loads categories here) -->
   <div class="grid"></div>
+
 </section>
 
-<!-- ABOUT + CONTACT -->
+<!-- ================= ABOUT + CONTACT ================= -->
 <section id="info" class="info-grid">
 
   <div class="info-card about">
@@ -85,7 +92,7 @@
 
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer class="footer">
 
   <div class="footer-content">
@@ -95,32 +102,14 @@
       <p>Premium plant exporter delivering worldwide greenery solutions.</p>
     </div>
 
-    <div class="social-footer">
-      <h3>Follow Us</h3>
+    <div class="social-icons">
 
-      <div class="social-icons">
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png"></a>
+      <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/145/145807.png"></a>
+      <a href="mailto:sales@plantxportglobal.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png"></a>
+      <a href="https://wa.me/919876543210"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"></a>
 
-        <a href="#">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-        </a>
-
-        <a href="#">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram">
-        </a>
-
-        <a href="#">
-          <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
-        </a>
-
-        <a href="mailto:sales@plantxportglobal.com">
-          <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email">
-        </a>
-
-        <a href="https://wa.me/919876543210">
-          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
-        </a>
-
-      </div>
     </div>
 
   </div>
@@ -131,7 +120,7 @@
 
 </footer>
 
-<!-- FLOATING -->
+<!-- ================= FLOATING BUTTONS ================= -->
 <div class="floating">
   <a href="https://wa.me/919876543210" class="wa">
     <i class="fa-brands fa-whatsapp"></i>
@@ -142,6 +131,26 @@
   </a>
 </div>
 
+<!-- ================= MODAL ================= -->
+<div class="modal" id="modal">
+
+  <div class="modal-content">
+
+    <div class="modal-header">
+      <h2 id="modal-title">Category</h2>
+      <button class="close-btn" onclick="closeModal()">✕</button>
+    </div>
+
+    <p id="modal-desc"></p>
+
+    <div class="modal-grid" id="modal-grid"></div>
+
+  </div>
+
+</div>
+
+<!-- ================= SCRIPT ================= -->
 <script src="./scripts/script.js"></script>
+
 </body>
 </html>
