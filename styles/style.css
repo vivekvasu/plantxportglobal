@@ -9,16 +9,14 @@
   font-family: 'Inter', sans-serif;
 }
 
-
-/* =========================
-   PREMIUM SITE BACKGROUND
-========================= */
 body {
   background:
     radial-gradient(circle at top left, #e9f5ee 0%, transparent 40%),
     radial-gradient(circle at bottom right, #f6f1e8 0%, transparent 45%),
     linear-gradient(180deg, #ffffff 0%, #f4f7f5 100%);
+
   color: #1a1a1a;
+  line-height: 1.4;
 }
 
 /* =========================
@@ -91,13 +89,17 @@ body {
    HERO
 ========================= */
 .hero {
-  height: 80vh;
+  height: 55vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(#2bed75, rgb(116 122 115 / 45%)), url(https://images.unsplash.com/photo-1501004318641-b39e6451bec6) center / cover;
-  /* color: white; */
+
+  background:
+    linear-gradient(rgba(12, 181, 37, 0.45), rgba(0,0,0,0.45)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") center/cover;
+
+  color: white;
 }
 
 .hero h1 {
@@ -114,7 +116,6 @@ body {
   align-items: center;
 }
 
-/* TITLE */
 .section-title {
   font-size: 28px;
   font-weight: 600;
@@ -138,20 +139,32 @@ body {
 ========================= */
 #catalog {
   position: relative;
+  padding: 90px 20px;
 
   background:
-    linear-gradient(rgba(255,255,255,0.92),#8cba8b),
-    url("https://images.unsplash.com/photo-1446071103084-c257b5f70672?auto=format&fit=crop&w=1600&q=80");
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.92)),
+    url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80");
 
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
 
-  padding: 80px 20px;
+#catalog::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.55);
+  pointer-events: none;
+}
+
+#catalog > * {
+  position: relative;
+  z-index: 2;
 }
 
 /* =========================
-   GRID (FULL WIDTH)
+   GRID
 ========================= */
 .grid {
   display: grid;
@@ -163,14 +176,11 @@ body {
   padding: 0 40px;
 }
 
-/* CARD */
 .card {
   background: white;
   border-radius: 12px;
   overflow: hidden;
-
   border: 1px solid #eee;
-
   transition: 0.3s;
   cursor: pointer;
 }
@@ -191,12 +201,11 @@ body {
 }
 
 /* =========================
-   MODAL
+   MODAL BACKDROP
 ========================= */
 .modal {
   position: fixed;
   inset: 0;
-
   background: rgba(0,0,0,0.6);
 
   display: none;
@@ -211,6 +220,9 @@ body {
   display: flex;
 }
 
+/* =========================
+   MODAL CONTENT (CENTERED)
+========================= */
 .modal-content {
   width: 100%;
   max-width: 900px;
@@ -219,8 +231,11 @@ body {
   background: white;
   border-radius: 16px;
 
-  padding: 20px;
+  padding: 25px;
+
   overflow-y: auto;
+
+  text-align: center;
 
   animation: pop 0.2s ease;
 }
@@ -230,36 +245,104 @@ body {
   to { transform: scale(1); opacity: 1; }
 }
 
+/* =========================
+   MODAL HEADER
+========================= */
+
+/* =========================
+   MODAL HEADER (CENTERED STYLE)
+========================= */
 .modal-header {
+  position: relative;
+
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 10px;
+
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #eee;
 }
 
+/* CENTER TITLE */
 .modal-header h2 {
+  font-size: 22px;
+  font-weight: 600;
   color: #0f3d2e;
+  text-align: center;
 }
 
+/* DECORATIVE LINE UNDER TITLE */
+.modal-header h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+
+  background: #2ecc71;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* FLOATING CLOSE BUTTON (NOT DISTURBING CENTER ALIGNMENT) */
 .close-btn {
-  width: 34px;
-  height: 34px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 36px;
+  height: 36px;
+
   border-radius: 50%;
   border: none;
+
   background: #0f3d2e;
   color: white;
+
   cursor: pointer;
 }
 
-/* MODAL GRID */
-.modal-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
+/* =========================
+   MODAL DESCRIPTION
+========================= */
+.modal-content p {
+  max-width: 650px;
+  margin: 10px auto 25px;
+
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
 }
 
 /* =========================
-   INFO SECTION (ABOUT + CONTACT)
+   MODAL TITLE DECORATION
+========================= */
+.modal-content > h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+
+  background: #2ecc71;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* =========================
+   MODAL GRID
+========================= */
+.modal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+
+  margin-top: 10px;
+}
+
+/* =========================
+   INFO SECTION
 ========================= */
 .info-grid {
   display: grid;
@@ -304,7 +387,6 @@ body {
   margin-bottom: 6px;
 }
 
-/* COLORS */
 .info-card.about {
   background: linear-gradient(135deg, #1f5f3b, #2ecc71);
 }
@@ -318,7 +400,6 @@ body {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 
 .btn {
@@ -360,7 +441,6 @@ body {
   position: fixed;
   right: 18px;
   bottom: 18px;
-
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -381,14 +461,7 @@ body {
 .mail { background: #EA4335; }
 
 /* =========================
-   BODY LOCK
-========================= */
-body.modal-open {
-  overflow: hidden;
-}
-
-/* =========================
-   MOBILE FIX (IMPORTANT)
+   MOBILE
 ========================= */
 @media (max-width: 768px) {
 
@@ -415,15 +488,10 @@ body.modal-open {
     font-size: 28px;
   }
 
-  /* GRID = SAME STYLE AS ABOUT/CONTACT (1 COLUMN) */
   .grid,
   .modal-grid {
     grid-template-columns: 1fr !important;
     padding: 0 16px;
-  }
-
-  .card img {
-    height: 220px;
   }
 
   .info-grid {
