@@ -169,7 +169,6 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 22px;
-
   width: 100%;
   max-width: 100%;
   padding: 0 40px;
@@ -226,10 +225,8 @@ body {
   width: 100%;
   max-width: 900px;
   max-height: 85vh;
-
   background: white;
   border-radius: 16px;
-
   padding: 25px;
 
   overflow-y: auto;
