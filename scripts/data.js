@@ -70,7 +70,7 @@ const DATA = [
           "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"
         ],
         videos: [
-          "https://www.youtube.com/embed/6R4Q8Vh7K5k",
+          "https://www.youtube.com/embed/CzX8TEfnndo",
           "https://samplelib.com/lib/preview/mp4/sample-10s.mp4"
         ],
         desc: "Fragrant flowering plant with multiple colors"
