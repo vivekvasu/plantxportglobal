@@ -10,8 +10,11 @@ function renderCategories() {
 
   grid.innerHTML = DATA.map((cat, catIndex) => `
     <div class="card" onclick="openCategory(${catIndex})">
-      <img src="${cat.img}" 
-           onerror="this.src='https://via.placeholder.com/400x300?text=Category'">
+      <img
+        src="${cat.img}"
+        loading="lazy"
+        onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=10';"
+      >
       <div class="card-content">
         <h3>${cat.name}</h3>
         <p>${cat.desc || ""}</p>
@@ -35,8 +38,11 @@ function openCategory(catIndex) {
 
   modalGrid.innerHTML = cat.items.map((item, itemIndex) => `
     <div class="card" onclick="openPlant(${catIndex}, ${itemIndex})">
-      <img src="${item.img}" 
-           onerror="this.src='https://via.placeholder.com/400x300?text=Plant'">
+      <img
+        src="${item.img}"
+        loading="lazy"
+        onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=20';"
+      >
       <div class="card-content">
         <h3>${item.name}</h3>
       </div>
@@ -48,7 +54,7 @@ function openCategory(catIndex) {
 
 
 /* =========================
-   OPEN PLANT (AMAZON STYLE VIEWER)
+   OPEN PLANT
 ========================= */
 function openPlant(catIndex, itemIndex) {
   const plant = DATA[catIndex].items[itemIndex];
@@ -62,22 +68,30 @@ function openPlant(catIndex, itemIndex) {
   const images = plant.images?.length ? plant.images : [plant.img];
   const videos = plant.videos || [];
 
-  // reset main
+  /* MAIN IMAGE */
   main.innerHTML = `
-    <img id="main-img" src="${images[0]}" 
-         style="width:100%; border-radius:12px;">
+    <img
+      src="${images[0]}"
+      style="width:100%; border-radius:12px;"
+      onerror="this.onerror=null; this.src='https://picsum.photos/800/600?random=30';"
+    >
   `;
 
-  /* =========================
-     IMAGE THUMBNAILS
-  ========================= */
-  thumbs.innerHTML = images.map(img => `
-    <img src="${img}" onclick="changeMainMedia('${img}')">
-  `).join("");
+  /* RESET THUMBS */
+  thumbs.innerHTML = "";
 
-  /* =========================
-     VIDEO THUMBNAILS
-  ========================= */
+  /* IMAGE THUMBS */
+  images.forEach(img => {
+    thumbs.innerHTML += `
+      <img
+        src="${img}"
+        onclick="changeMainMedia('${img}')"
+        onerror="this.onerror=null; this.src='https://picsum.photos/100?random=40';"
+      >
+    `;
+  });
+
+  /* VIDEO THUMBS */
   videos.forEach((video, i) => {
     thumbs.innerHTML += `
       <div class="video-thumb" onclick="showMedia('${video}')">
@@ -97,37 +111,58 @@ function changeMainMedia(src) {
   const main = document.getElementById("plant-main-media");
 
   main.innerHTML = `
-    <img id="main-img" src="${src}" 
-         style="width:100%; border-radius:12px;">
+    <img
+      src="${src}"
+      style="width:100%; border-radius:12px;"
+      onerror="this.onerror=null; this.src='https://picsum.photos/800/600?random=50';"
+    >
   `;
 }
 
 
 /* =========================
-   SHOW VIDEO (MP4 + YOUTUBE AUTO SUPPORT)
+   EXTRACT YOUTUBE ID (FIXED)
+========================= */
+function extractYouTubeId(url) {
+  try {
+    if (url.includes("youtu.be/")) {
+      return url.split("youtu.be/")[1].split("?")[0];
+    }
+
+    if (url.includes("watch?v=")) {
+      return url.split("watch?v=")[1].split("&")[0];
+    }
+
+    if (url.includes("embed/")) {
+      return url.split("embed/")[1].split("?")[0];
+    }
+
+    return null;
+  } catch (e) {
+    return null;
+  }
+}
+
+
+/* =========================
+   SHOW MEDIA (VIDEO + MP4 FIXED)
 ========================= */
 function showMedia(src) {
   const main = document.getElementById("plant-main-media");
 
-  // Detect YouTube links
   const isYouTube =
     src.includes("youtube.com") ||
     src.includes("youtu.be");
 
   if (isYouTube) {
-    let videoId = "";
+    const videoId = extractYouTubeId(src);
 
-    // Convert youtu.be/ID
-    if (src.includes("youtu.be")) {
-      videoId = src.split("/").pop();
+    if (!videoId) {
+      main.innerHTML = `<p>Invalid YouTube link</p>`;
+      return;
     }
 
-    // Convert youtube.com/watch?v=ID
-    else if (src.includes("watch?v=")) {
-      videoId = src.split("v=")[1].split("&")[0];
-    }
-
-    const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+    const embedUrl = `https://www.youtube.com/embed/${videoId}?rel=0`;
 
     main.innerHTML = `
       <iframe
@@ -140,10 +175,7 @@ function showMedia(src) {
         allowfullscreen>
       </iframe>
     `;
-  }
-
-  // MP4 fallback
-  else {
+  } else {
     main.innerHTML = `
       <video controls autoplay style="width:100%; border-radius:12px;">
         <source src="${src}" type="video/mp4">
@@ -154,16 +186,12 @@ function showMedia(src) {
 
 
 /* =========================
-   CLOSE CATEGORY MODAL
+   CLOSE MODALS
 ========================= */
 function closeModal() {
   document.getElementById("modal").classList.remove("show");
 }
 
-
-/* =========================
-   CLOSE PLANT MODAL
-========================= */
 function closePlantModal() {
   document.getElementById("plantModal").classList.remove("show");
 }
