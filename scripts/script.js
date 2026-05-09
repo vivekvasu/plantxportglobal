@@ -193,7 +193,10 @@ function closeModal() {
 }
 
 function closePlantModal() {
-  document.getElementById("plantModal").classList.remove("show");
+  const modal = document.getElementById("plantModal");
+  const main = document.getElementById("plant-main-media");
+  main.innerHTML = "";
+  modal.classList.remove("show");
 }
 
 
