@@ -1,3 +1,20 @@
+/* =========================
+   MEDIA PATH RESOLVER
+========================= */
+function mediaPath(path) {
+  if (!path) return "";
+
+  if (
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("data:")
+  ) {
+    return path;
+  }
+
+  return path; // local / relative path (GitHub Pages safe)
+}
+
 
 /* =========================
    INIT CATEGORY GRID
@@ -11,7 +28,7 @@ function renderCategories() {
   grid.innerHTML = DATA.map((cat, catIndex) => `
     <div class="card" onclick="openCategory(${catIndex})">
       <img
-        src="${cat.img}"
+        src="${mediaPath(cat.img)}"
         loading="lazy"
         onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=10';"
       >
@@ -39,7 +56,7 @@ function openCategory(catIndex) {
   modalGrid.innerHTML = cat.items.map((item, itemIndex) => `
     <div class="card" onclick="openPlant(${catIndex}, ${itemIndex})">
       <img
-        src="${item.img}"
+        src="${mediaPath(item.img)}"
         loading="lazy"
         onerror="this.onerror=null; this.src='https://picsum.photos/400/300?random=20';"
       >
@@ -71,20 +88,19 @@ function openPlant(catIndex, itemIndex) {
   /* MAIN IMAGE */
   main.innerHTML = `
     <img
-      src="${images[0]}"
+      src="${mediaPath(images[0])}"
       style="width:100%; border-radius:12px;"
       onerror="this.onerror=null; this.src='https://picsum.photos/800/600?random=30';"
     >
   `;
 
-  /* RESET THUMBS */
   thumbs.innerHTML = "";
 
   /* IMAGE THUMBS */
   images.forEach(img => {
     thumbs.innerHTML += `
       <img
-        src="${img}"
+        src="${mediaPath(img)}"
         onclick="changeMainMedia('${img}')"
         onerror="this.onerror=null; this.src='https://picsum.photos/100?random=40';"
       >
@@ -112,8 +128,8 @@ function changeMainMedia(src) {
 
   main.innerHTML = `
     <img
-      src="${src}"
-      style="width:100%; border-radius:12px;"
+      src="${mediaPath(src)}"
+      style="border-radius:12px;"
       onerror="this.onerror=null; this.src='https://picsum.photos/800/600?random=50';"
     >
   `;
@@ -121,7 +137,7 @@ function changeMainMedia(src) {
 
 
 /* =========================
-   EXTRACT YOUTUBE ID (FIXED)
+   YOUTUBE ID
 ========================= */
 function extractYouTubeId(url) {
   try {
@@ -145,7 +161,7 @@ function extractYouTubeId(url) {
 
 
 /* =========================
-   SHOW MEDIA (VIDEO + MP4 FIXED)
+   SHOW MEDIA
 ========================= */
 function showMedia(src) {
   const main = document.getElementById("plant-main-media");
@@ -171,14 +187,13 @@ function showMedia(src) {
         style="border-radius:12px;"
         src="${embedUrl}"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen>
       </iframe>
     `;
   } else {
     main.innerHTML = `
       <video controls autoplay style="width:100%; border-radius:12px;">
-        <source src="${src}" type="video/mp4">
+        <source src="${mediaPath(src)}" type="video/mp4">
       </video>
     `;
   }
@@ -193,10 +208,8 @@ function closeModal() {
 }
 
 function closePlantModal() {
-  const modal = document.getElementById("plantModal");
-  const main = document.getElementById("plant-main-media");
-  main.innerHTML = "";
-  modal.classList.remove("show");
+  document.getElementById("plant-main-media").innerHTML = "";
+  document.getElementById("plantModal").classList.remove("show");
 }
 
 

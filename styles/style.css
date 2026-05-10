@@ -222,7 +222,7 @@ body {
    MODAL CONTENT (CENTERED)
 ========================= */
 .modal-content {
-  width: 100%;
+  width: 50%;
   max-width: 900px;
   max-height: 85vh;
   background: white;
@@ -843,7 +843,7 @@ body {
 .contact-item p {
   color: rgba(255,255,255,0.85);
   line-height: 1.7;
-  font-size: 10px;
+  font-size: 15px;
 }
 
 /* BUTTONS */

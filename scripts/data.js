@@ -2,56 +2,49 @@ const DATA = [
   {
     name: "Indoor Plants",
     desc: "Home & office greenery",
-    img: "https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=1200&q=80",
+    img: "assets/indoor/calathea.jpeg",
     items: [
       {
-        name: "Monstera deliciosa",
-        img: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "./assets/monstera.jpg"
-        ],
-        videos: [
-          "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
-          "https://www.youtube.com/embed/dQw4w9WgXcQ"
-        ],
-        desc: "Medicinal succulent used for skincare and healing"
+        name: "Monstera Deliciosa",
+        img: "assets/indoor/monstera.jpeg",
+        images: ["assets/indoor/monstera.jpeg"],
+        videos: [],
+        desc: "Iconic tropical indoor plant with large split leaves. Improves air quality and adds a lush aesthetic."
       },
-
       {
-        name: "Snake Plant",
-        img: "https://images.unsplash.com/photo-1593691509543-c55fb32e5b6b?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1593691509543-c55fb32e5b6b?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/1t5Q6Zk4q2Q",
-          "https://samplelib.com/lib/preview/mp4/sample-10s.mp4"
-        ],
-        desc: "Best low maintenance air purifier plant"
+        name: "Calathea Beauty Star",
+        img: "assets/indoor/calathea.jpeg",
+        images: ["assets/indoor/calathea.jpeg"],
+        videos: [],
+        desc: "Decorative foliage plant known for its patterned leaves and air-purifying qualities."
       },
-
       {
         name: "Peace Lily",
         img: "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/ysz5S6PUM-U"
-        ],
-        desc: "Elegant flowering indoor plant"
+        images: ["https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=900&q=80"],
+        videos: [],
+        desc: "Elegant flowering indoor plant that blooms white flowers and purifies indoor air."
       },
-
       {
-        name: "Money Plant",
-        img: "https://images.unsplash.com/photo-1604762524889-3e2fcc145683?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1604762524889-3e2fcc145683?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
-        ],
-        desc: "Fast-growing indoor vine plant"
+        name: "Spider Plant",
+        img: "assets/indoor/spider.jpeg",
+        images: ["assets/indoor/spider.jpeg"],
+        videos: [],
+        desc: "Easy-care trailing plant that removes toxins and grows quickly in indoor environments."
+      },
+      {
+        name: "ZZ Plant (Zamioculcas zamiifolia)",
+        img: "assets/indoor/zamioculcas.jpeg",
+        images: ["assets/indoor/zamioculcas.jpeg", "assets/indoor/zz1.jpeg"],
+        videos: [],
+        desc: "Extremely hardy indoor plant that thrives in low light and requires minimal maintenance."
+      },
+      {
+        name: "Snake Plant (Dracaena trifasciata)",
+        img: "assets/indoor/snakeplant.jpeg",
+        images: ["assets/indoor/snakeplant.jpeg"],
+        videos: [],
+        desc: "One of the best air-purifying plants that releases oxygen even at night."
       }
     ]
   },
@@ -59,185 +52,191 @@ const DATA = [
   {
     name: "Outdoor Plants",
     desc: "Garden landscaping plants",
-    img: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=1200&q=80",
+    img: "assets/outdoor/foxtailagave.jpeg",
     items: [
       {
-        name: "Rose",
-        img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/CzX8TEfnndo",
-          "https://samplelib.com/lib/preview/mp4/sample-10s.mp4"
-        ],
-        desc: "Fragrant flowering plant with multiple colors"
+        name: "Heliconia",
+        img: "assets/outdoor/heliconia.jpeg",
+        images: ["assets/outdoor/heliconia.jpeg"],
+        videos: [],
+        desc: "Bright tropical flowering plant known for its striking red and yellow bracts."
       },
-
       {
-        name: "Hibiscus",
-        img: "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1597848212624-a19eb35e2651?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/dQw4w9WgXcQ"
-        ],
-        desc: "Tropical flowering garden plant"
+        name: "Ficus Panda Plant",
+        img: "assets/outdoor/ficuspanda.jpeg",
+        images: ["assets/outdoor/ficuspanda.jpeg"],
+        videos: [],
+        desc: "Ornamental outdoor plant with glossy leaves, ideal for landscaping and hedges."
       },
+      {
+        name: "Foxtail Agave",
+        img: "assets/outdoor/foxtailagave.jpeg",
+        images: ["assets/outdoor/foxtailagave.jpeg"],
+        videos: [],
+        desc: "Architectural succulent plant with dramatic rosette shape, perfect for dry gardens."
+      }
+    ]
+  },
 
+  {
+    name: "Fruit Plants",
+    desc: "Homegrown fruit trees",
+    img: "assets/fruit/mango.jpeg",
+    items: [
+      {
+        name: "Mango Tree",
+        img: "assets/fruit/mango.jpeg",
+        images: ["assets/fruit/mango.jpeg"],
+        videos: [],
+        desc: "Popular tropical fruit tree producing sweet, juicy mangoes."
+      },
+      {
+        name: "Star Fruit (Carambola)",
+        img: "assets/fruit/starfruit.jpeg",
+        images: ["assets/fruit/starfruit.jpeg"],
+        videos: [],
+        desc: "Exotic fruit tree producing star-shaped tangy-sweet fruits rich in vitamin C."
+      },
+      {
+        name: "Sapota (Chikoo)",
+        img: "assets/fruit/sapota.jpeg",
+        images: ["assets/fruit/sapota.jpeg"],
+        videos: [],
+        desc: "Sweet tropical fruit tree with soft brown pulp and caramel-like flavor."
+      },
+      {
+        name: "Jamun",
+        img: "assets/fruit/jamun.jpeg",
+        images: ["assets/fruit/jamun.jpeg"],
+        videos: [],
+        desc: "Medicinal fruit tree known for deep purple berries with health benefits."
+      },
+      {
+        name: "Pomegranate",
+        img: "assets/fruit/pomegranate.jpeg",
+        images: ["assets/fruit/pomegranate.jpeg"],
+        videos: [],
+        desc: "Fruit-bearing plant producing antioxidant-rich red seeded fruits."
+      }
+    ]
+  },
+
+  {
+    name: "Flowering Plants / Trees",
+    desc: "Colorful blooming plants",
+    img: "assets/flower/peacockflower.jpeg",
+    items: [
+      {
+        name: "Cherry Blossom",
+        img: "assets/flower/cherryblossom.jpeg",
+        images: ["assets/flower/cherryblossom.jpeg"],
+        videos: [],
+        desc: "Beautiful ornamental tree known for seasonal pink-white blossoms."
+      },
       {
         name: "Bougainvillea",
-        img: "https://images.unsplash.com/photo-1603436326446-74e2b0e5c5e7?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1603436326446-74e2b0e5c5e7?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
-        ],
-        desc: "Colorful climbing plant for walls & fences"
+        img: "assets/flower/bougainvillea.jpeg",
+        images: ["assets/flower/bougainvillea.jpeg"],
+        videos: [],
+        desc: "Fast-growing climber with vibrant paper-like flowers."
+      },
+      {
+        name: "Gulmohar",
+        img: "assets/flower/gulmohar.jpeg",
+        images: ["assets/flower/gulmohar.jpeg"],
+        videos: [],
+        desc: "Flamboyant tree with fiery red-orange flowers, ideal for avenues."
+      },
+      {
+        name: "Peacock Flower",
+        img: "assets/flower/peacockflower.jpeg",
+        images: ["assets/flower/peacockflower.jpeg"],
+        videos: [],
+        desc: "Tropical flowering plant with bright, exotic ornamental blooms."
+      },
+      {
+        name: "Red Ixora",
+        img: "assets/flower/redIxora.jpeg",
+        images: ["assets/flower/redIxora.jpeg"],
+        videos: [],
+        desc: "Compact shrub producing clusters of bright red flowers year-round."
+      },
+      {
+        name: "Tecoma stans (Yellow Bells)",
+        img: "assets/flower/tecoma.jpeg",
+        images: ["assets/flower/tecoma.jpeg"],
+        videos: [],
+        desc: "Sun-loving flowering shrub with bright yellow trumpet-shaped flowers."
       }
     ]
   },
 
   {
-    name: "Succulents",
-    desc: "Low maintenance desert plants",
-    img: "https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1200&q=80",
+    name: "Bonsai Plants",
+    desc: "Miniature artistic trees",
+    img: "assets/bonsai/ficus.jpeg",
     items: [
       {
-        name: "Echeveria",
-        img: "https://images.unsplash.com/photo-1524593119773-6f3d9c72b8d6?auto=format&fit=crop&w=600&q=80",
+        name: "Ficus Microcarpa (Chinese Banyan)",
+        img: "assets/bonsai/ficus.jpeg",
         images: [
-          "https://images.unsplash.com/photo-1524593119773-6f3d9c72b8d6?auto=format&fit=crop&w=900&q=80"
+          "assets/bonsai/ficus.jpeg",
+          "assets/bonsai/ficus1.jpeg",
+          "assets/bonsai/ficus2.jpeg",
+          "assets/bonsai/ficus3.jpeg"
         ],
-        videos: [
-          "https://www.youtube.com/embed/2vjPBrBU-TM"
-        ],
-        desc: "Rosette ornamental succulent"
-      },
-
-      {
-        name: "Jade Plant",
-        img: "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://samplelib.com/lib/preview/mp4/sample-10s.mp4"
-        ],
-        desc: "Lucky money plant succulent"
-      },
-
-      {
-        name: "Cactus Mix",
-        img: "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/ysz5S6PUM-U"
-        ],
-        desc: "Desert survival plants collection"
+        videos: [],
+        desc: "Popular bonsai species with thick trunk and dense canopy, ideal for styling."
       }
     ]
   },
 
-  {
-    name: "Vegetable Plants",
-    desc: "Fresh home vegetables",
-    img: "https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=1200&q=80",
-    items: [
-      {
-        name: "Tulsi",
-        img: "https://images.unsplash.com/photo-1603436326446-74e2b0e5c5e7?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1603436326446-74e2b0e5c5e7?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/3Q8XkQZl1yQ"
-        ],
-        desc: "Sacred immunity boosting herb"
-      },
-
-      {
-        name: "Neem",
-        img: "https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
-        ],
-        desc: "Natural antibacterial healing tree"
-      },
-
-      {
-        name: "Aloe Vera Medicinal",
-        img: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/dQw4w9WgXcQ"
-        ],
-        desc: "Skin healing medicinal plant"
-      }
-    ]
-  },
-  {
-    name: "Herbs",
-    desc: "Culinary aromatic herbs",
-    img: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80",
-    items: [
-      {
-        name: "Mint",
-        img: "https://images.unsplash.com/photo-1628556270448-4d4e6f8d7b79?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1628556270448-4d4e6f8d7b79?auto=format&fit=crop&w=800&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/3Q8XkQZl1yQ"
-        ],
-        desc: "Refreshing culinary herb"
-      }
-    ]
-  },
-
-  {
-    name: "Flowering Plants",
-    desc: "Colorful blooming plants",
-    img: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=1200&q=80",
-    items: [
-      {
-        name: "Sunflower",
-        img: "https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1508747703725-719777637510?auto=format&fit=crop&w=800&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/6R4Q8Vh7K5k"
-        ],
-        desc: "Bright sun-facing flower plant"
-      }
-    ]
-  },
   {
     name: "Palm Plants",
-    desc: "Tropical palm plant varieties",
-    img: "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=1200&q=80",
+    desc: "Tropical palm varieties",
+    img: "assets/palm/bottlepalm.jpeg",
     items: [
       {
+        name: "Bottle Palm",
+        img: "assets/palm/bottlepalm.jpeg",
+        images: ["assets/palm/bottlepalm.jpeg"],
+        videos: [],
+        desc: "Slow-growing ornamental palm with a swollen trunk base."
+      },
+      {
+        name: "Bismarck Palm",
+        img: "assets/palm/bismarckpalm.jpeg",
+        images: ["assets/palm/bismarckpalm.jpeg"],
+        videos: [],
+        desc: "Large dramatic palm with silver-blue fan-shaped leaves."
+      },
+      {
+        name: "Chinese Fan Palm",
+        img: "assets/palm/chinesefanpalm.jpeg",
+        images: ["assets/palm/chinesefanpalm.jpeg"],
+        videos: [],
+        desc: "Elegant palm with wide fan-shaped leaves used in landscaping."
+      },
+      {
         name: "Areca Palm",
-        img: "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1520412099551-62b6bafeb5bb?auto=format&fit=crop&w=800&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/jNQXAC9IVRw"
-        ],
-        desc: "Elegant tropical indoor palm"
+        img: "assets/palm/arecapalm.jpeg",
+        images: ["assets/palm/arecapalm.jpeg"],
+        videos: [],
+        desc: "Popular indoor palm that improves air quality and adds greenery."
+      },
+      {
+        name: "Sago Palm",
+        img: "assets/palm/sagopalm.jpeg",
+        images: ["assets/palm/sagopalm.jpeg"],
+        videos: [],
+        desc: "Ancient-looking ornamental plant with slow growth and stiff leaves."
+      },
+      {
+        name: "Bamboo Palm",
+        img: "assets/palm/bamboopalm.jpeg",
+        images: ["assets/palm/bamboopalm.jpeg"],
+        videos: [],
+        desc: "Indoor-friendly palm that thrives in shade and improves humidity."
       }
     ]
   }
