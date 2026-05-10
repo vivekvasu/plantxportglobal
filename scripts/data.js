@@ -5,11 +5,10 @@ const DATA = [
     img: "https://images.unsplash.com/photo-1545241047-6083a3684587?auto=format&fit=crop&w=1200&q=80",
     items: [
       {
-        name: "Aloe Vera",
+        name: "Monstera deliciosa",
         img: "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=600&q=80",
         images: [
-          "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=900&q=80",
-          "https://images.unsplash.com/photo-1615485290382-441e4d049cb5?auto=format&fit=crop&w=1000&q=80"
+          "./assets/monstera.jpg"
         ],
         videos: [
           "https://samplelib.com/lib/preview/mp4/sample-5s.mp4",
