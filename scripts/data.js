@@ -19,11 +19,11 @@ const DATA = [
         desc: "Decorative foliage plant known for its patterned leaves and air-purifying qualities."
       },
       {
-        name: "Peace Lily",
+        name: "Green Money Plant",
         img: "https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=600&q=80",
         images: ["https://images.unsplash.com/photo-1598880940080-ff9a29891b85?auto=format&fit=crop&w=900&q=80"],
         videos: [],
-        desc: "Elegant flowering indoor plant that blooms white flowers and purifies indoor air."
+        desc: "A popular indoor vine plant known for its lush green leaves, easy maintenance, and natural air-purifying qualities. Ideal for homes, offices, and decorative spaces."
       },
       {
         name: "Spider Plant",
