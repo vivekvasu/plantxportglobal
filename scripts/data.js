@@ -224,25 +224,6 @@ const DATA = [
       }
     ]
   },
-
-  {
-    name: "Medicinal Plants",
-    desc: "Natural herbal medicinal plants",
-    img: "https://images.unsplash.com/photo-1509423350716-97f2360af9e4?auto=format&fit=crop&w=1200&q=80",
-    items: [
-      {
-        name: "Aloe Vera",
-        img: "https://images.unsplash.com/photo-1509423350716-97f2360af9e4?auto=format&fit=crop&w=600&q=80",
-        images: [
-          "https://images.unsplash.com/photo-1509423350716-97f2360af9e4?auto=format&fit=crop&w=800&q=80"
-        ],
-        videos: [
-          "https://www.youtube.com/embed/1t5Q6Zk4q2Q"
-        ],
-        desc: "Medicinal succulent with healing properties"
-      }
-    ]
-  },
   {
     name: "Palm Plants",
     desc: "Tropical palm plant varieties",
