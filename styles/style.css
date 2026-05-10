@@ -222,7 +222,7 @@ body {
    MODAL CONTENT (CENTERED)
 ========================= */
 .modal-content {
-  width: 50%;
+  width: 100%;
   max-width: 900px;
   max-height: 85vh;
   background: white;
